@@ -57,6 +57,31 @@ class DestinationCarosel extends StatelessWidget {
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
                       ),
+                      child: Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end ,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              '${destination.activities.length} Activities',
+                              style: TextStyle(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.w600,
+                                letterSpacing: 1.2,
+                              ),
+                            ),
+                            Text(
+                              destination.description,
+                              style: TextStyle(
+                                color: Colors.grey,
+                                
+                              ),
+                            ),
+                             
+                          ],
+                        ),
+                      ),
                     ),
                   ],
                 ),

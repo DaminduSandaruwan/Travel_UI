@@ -63,6 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             SizedBox(height: 20,),
+            
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children:  _icons
@@ -74,8 +75,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   .toList(),
             ),
             SizedBox(height: 20.0),
-            DestinationCarosel(),
+            DestinationCarosel(),            
           ],
+          
         ),
       ),
     );
