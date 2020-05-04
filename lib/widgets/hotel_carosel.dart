@@ -46,7 +46,7 @@ class HotelCarosel extends StatelessWidget {
               Hotel hotel = hotels[index];
               return Container(
                 margin: EdgeInsets.all(10),
-                width: 210.0,
+                width: 240.0,
                 //color: Colors.red,
                 child: Stack(
                   alignment: Alignment.topCenter,
@@ -55,7 +55,7 @@ class HotelCarosel extends StatelessWidget {
                       bottom: 15.0,
                       child: Container(
                         height: 120.0,
-                        width: 200.0,                      
+                        width: 240.0,                      
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
@@ -64,7 +64,6 @@ class HotelCarosel extends StatelessWidget {
                           padding: EdgeInsets.all(10.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.end ,
-                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
                                 hotel.name,
@@ -78,11 +77,17 @@ class HotelCarosel extends StatelessWidget {
                               Text(
                                 hotel.address,
                                 style: TextStyle(
-                                  color: Colors.grey,
-                                  
+                                  color: Colors.grey,                                  
                                 ),
                               ),
-                               
+                              SizedBox(height: 2.0,),  
+                              Text(
+                                '\$${hotel.price} / night',
+                                style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -104,7 +109,7 @@ class HotelCarosel extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         child: Image(
                           height: 180.0,
-                          width: 180.0,
+                          width: 220.0,
                           image: AssetImage(hotel.imageUrl),
                           fit: BoxFit.cover,
                         ),
