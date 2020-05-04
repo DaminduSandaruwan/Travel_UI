@@ -32,14 +32,17 @@ class _DestinationScreenState extends State<DestinationScreen> {
                     ),
                   ],
                ),
-               child: ClipRRect(
-                 borderRadius: BorderRadius.circular(30.0),
-                 child: Image(
-                   image: AssetImage(
-                     widget.destination.imageUrl
+               child: Hero(
+                 tag: widget.destination.imageUrl,
+                 child: ClipRRect(
+                   borderRadius: BorderRadius.circular(30.0),
+                   child: Image(
+                     image: AssetImage(
+                       widget.destination.imageUrl
+                      ),
+                      fit: BoxFit.cover,
                     ),
-                    fit: BoxFit.cover,
-                  ),
+                 ),
                ),
               ),
               Padding(
